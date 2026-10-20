@@ -1,0 +1,4 @@
+# BTW side chat: one Host row, with its Client half served from the same package.
+- insert:
+    - id: btw-sidechat
+      name: '@local/dsh-btw-sidechat'

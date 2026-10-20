@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "BTW Side Chat",
+    "description": "Ask a side question in a read-only fork of the current conversation and read the answer in a right-sidebar window, without interrupting the main task."
+  }
+}

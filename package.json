@@ -1,0 +1,62 @@
+{
+  "name": "@local/dsh-btw-sidechat",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "BTW side chat for DeepSeek Harness: a read-only fork of the current conversation, answered in a Codex-style right-sidebar window.",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "LICENSE",
+    "docs"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-api-remotes",
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-conversation",
+        "@deepseek-ai/dsh-client-ui-sidebar-right",
+        "@deepseek-ai/dsh-api-session-controller"
+      ]
+    }
+  },
+  "license": "MIT",
+  "author": "Big-Smarty",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Big-Smarty/dsh-btw-sidechat.git"
+  },
+  "homepage": "https://github.com/Big-Smarty/dsh-btw-sidechat#readme",
+  "bugs": {
+    "url": "https://github.com/Big-Smarty/dsh-btw-sidechat/issues"
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "btw",
+    "side-chat",
+    "read-only",
+    "side-question"
+  ],
+  "scripts": {
+    "test": "node --test"
+  }
+}
